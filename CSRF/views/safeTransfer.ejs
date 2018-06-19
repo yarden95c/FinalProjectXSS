@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Safe Transfer</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1><span class="fa"></span> Welcome To Safe Transfer</h1>
+    </div>
+    <form action="/safeTransfer" method="post">
+        <div class="form-group">
+            <label>Amount (in Dollars)</label>
+            <input type="number" class="form-control" name="amount">
+        </div>
+        <div class="form-group">
+            <label>Account Name</label>
+            <input type="text" class="form-control" name="account">
+            <input type="hidden" name="csrfToken" value="<%=csrf%>" >
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-warning btn-lg">Transfer</button>
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>
